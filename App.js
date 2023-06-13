@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import { Text, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
+// import  Provider  from "react-redux";
 
 // SCREENS
 import Home from "./src/screens/Home";
+import store from "./src/store";
 
 const Stack = createStackNavigator();
 
@@ -20,15 +22,17 @@ export default function App() {
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator>
+          {/* <Provider store={store}> */}
           {isSignedIn ? (
             <>
               <Stack.Screen name="Home" component={Home} />
             </>
           ) : (
             <>
-              <Text>Has</Text>
+              <Stack.Screen name="Home" component={Home} />
             </>
           )}
+          {/* </Provider> */}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

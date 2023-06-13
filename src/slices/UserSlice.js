@@ -12,4 +12,4 @@ export const UserSlice = createSlice({
   },
 });
 
-export const {setUserDetails} = UserSlice.actions;
+export const { setUserDetails } = UserSlice.actions;
