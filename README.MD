@@ -6,7 +6,7 @@
 npm i
 ```
 
-For iOS
+For iOS (additional step)-
 
 ```bash
 npx pod install
