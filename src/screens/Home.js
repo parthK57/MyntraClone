@@ -4,7 +4,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 // COMPONENTS
 import Header from "../components/Home/Header";
-import SecoundaryHeader from "../components/Home/SecoundaryHeader";
 
 const Home = ({ navigation }) => {
   useEffect(() => {
@@ -14,9 +13,7 @@ const Home = ({ navigation }) => {
   return (
     <SafeAreaView className="h-screen w-screen">
       <Header />
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <SecoundaryHeader />
-      </ScrollView>
+      
     </SafeAreaView>
   );
 };
