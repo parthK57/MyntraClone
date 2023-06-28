@@ -1,13 +1,21 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
 // COMPONENTS
 import Icon from "react-native-vector-icons/AntDesign";
 
+// SLICES
+import { toggleSidebar } from "../../slices/AppMechanics";
+
 const Header = () => {
+  const dispatch = useDispatch();
   const [hamburger, setHamburger] = useState("menu-fold");
   const toggleHamburger = () => {
-    if (hamburger === "menu-fold") setHamburger("menu-unfold");
+    if (hamburger === "menu-fold") {
+      setHamburger("menu-unfold");
+      dispatch(toggleSidebar(true));
+    }
     else setHamburger("menu-fold");
   };
 
