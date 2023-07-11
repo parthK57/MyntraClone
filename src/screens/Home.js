@@ -25,6 +25,7 @@ const Home = ({ navigation }) => {
     <SafeAreaView className="relative h-screen w-screen bg-white">
       <ScrollView className="w-full" showsVerticalScrollIndicator={false}>
         <Header />
+        {sidebarStatus && <Sidebar />}
         {/* // TODO: ADD EVERYTHING AS FLATLIST COMPONENT FROM BELOW */}
         <View className="bg-white py-2">
           <Categories data={APPDATA?.categories} />
@@ -130,7 +131,7 @@ const Home = ({ navigation }) => {
             />
           </TouchableOpacity>
         </View>
-        <View className="w-full bg-white mt-3">
+        <View className="mt-3 w-full bg-white">
           <CardList data={APPDATA.cardList1} />
         </View>
         <View className="h-16 w-full">

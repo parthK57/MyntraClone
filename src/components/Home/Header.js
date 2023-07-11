@@ -15,8 +15,10 @@ const Header = () => {
     if (hamburger === "menu-fold") {
       setHamburger("menu-unfold");
       dispatch(toggleSidebar(true));
+    } else {
+      setHamburger("menu-fold");
+      dispatch(toggleSidebar(false));
     }
-    else setHamburger("menu-fold");
   };
 
   return (
